@@ -2,7 +2,12 @@ package com.rage.quizzmesiapps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.os.Bundle;
+
+import android.widget.TextView;
+
+import static android.os.Build.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // cache la action bar
         getSupportActionBar().hide();
+        TextView version =   findViewById(R.id.txtVersion);
+        version.setText(BuildConfig.VERSION_NAME);
     }
 
 
